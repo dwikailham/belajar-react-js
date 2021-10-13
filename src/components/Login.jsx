@@ -2,8 +2,10 @@ import { makeStyles } from "@material-ui/core";
 import React from "react";
 import '../index.css';
 import logoIST from "../assets/images/logoIST.png";
+import Input from "./Input";
+import Button from "./Button";
 
-const styles = makeStyles(theme => ({
+const styles = makeStyles(() => ({
     body:{
         display:"table",
         height:"100%",
@@ -23,23 +25,6 @@ const styles = makeStyles(theme => ({
     form:{
         border: "3px solid #231E20",
         width: "350px"
-    },
-    input:{
-        width: "100%",
-        padding: "12px 20px",
-        margin: "8px 0px",
-        display: "inline-block",
-        border: "1px solid #ccc",
-        boxSizing: "border-box"
-    },
-    btnStyle:{
-        backgroundColor: "#231E20",
-        color: "white",
-        padding: "14px 20px",
-        margin: "8px 0px",
-        border: "none",
-        cursor: "pointer",
-        width: "100%"
     },
     imgContainer:{
         textAlign: "center",
@@ -72,25 +57,8 @@ function Login() {
                         <img className={classes.imgSize} src={logoIST} alt="logo" />
                     </div>
                     <div className={classes.formContent}>
-                        <label htmlFor="username">
-                            <h4 className="font-size-15">Username</h4>
-                        </label>
-                        <input 
-                            className={classes.input} 
-                            type="text" 
-                            id="username" 
-                            placeholder="Enter Username"
-                            required/>
-                        <label htmlFor="password">
-                            <h4 className="font-size-15">Password</h4>
-                        </label>
-                        <input 
-                            className={classes.input} 
-                            type="password" 
-                            id="password" 
-                            placeholder="Enter Password"
-                            required/>
-                    <button className={classes.btnStyle}>Login</button>
+                        <Input />
+                        <Button />
                     </div>
                 </form>
             </div>
