@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
 import '../index.css';
+import logoIST from "../assets/images/logoIST.png";
 
 const styles = makeStyles(theme => ({
     body:{
@@ -20,7 +21,7 @@ const styles = makeStyles(theme => ({
     },
 
     form:{
-        border: "3px solid #f1f1f1",
+        border: "3px solid #231E20",
         width: "350px"
     },
     input:{
@@ -32,13 +33,21 @@ const styles = makeStyles(theme => ({
         boxSizing: "border-box"
     },
     btnStyle:{
-        backgroundColor: "#4caf50",
+        backgroundColor: "#231E20",
         color: "white",
         padding: "14px 20px",
         margin: "8px 0px",
         border: "none",
         cursor: "pointer",
         width: "100%"
+    },
+    imgContainer:{
+        textAlign: "center",
+        margin: "24px 0px 12px 0px"
+    },
+    imgSize:{
+        width: "40%",
+
     }
 }))
 
@@ -49,6 +58,9 @@ function Login() {
             <div className={classes.content}>
                 <h2>Login Form</h2>
                 <form className={classes.form}>
+                    <div className={classes.imgContainer}>
+                        <img className={classes.imgSize} src={logoIST} alt="logo" />
+                    </div>
                     <div className={classes.formContent}>
                         <label htmlFor="username">
                             <h4 className="font-size-15">Username</h4>
