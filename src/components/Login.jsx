@@ -47,7 +47,17 @@ const styles = makeStyles(theme => ({
     },
     imgSize:{
         width: "40%",
-
+    },
+    title:{
+        fontSize: "24px",
+        color: "#333333",
+        fontWeight: "400",
+        lineHeight: "30px",
+        textAlign: "left",
+        paddingLeft: "0.5em",
+        marginBottom: "0.3em",
+        marginTop: "30px !important",
+        fontFamily: "OpenSansSemiBold"
     }
 }))
 
@@ -56,7 +66,7 @@ function Login() {
     return(
         <div className={classes.body}>
             <div className={classes.content}>
-                <h2>Login Form</h2>
+                <h2 className={classes.title}>Login Form</h2>
                 <form className={classes.form}>
                     <div className={classes.imgContainer}>
                         <img className={classes.imgSize} src={logoIST} alt="logo" />
