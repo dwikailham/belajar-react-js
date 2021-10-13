@@ -1,23 +1,76 @@
+import { makeStyles } from "@material-ui/core";
 import React from "react";
 
+const styles = makeStyles(theme => ({
+    body:{
+        display:"table",
+        height:"100%",
+        margin: "0 auto",
+    },
+    content:{
+        display:"table-cell",
+        verticalAlign: "middle"
+    },
+
+    formContent:{
+        width: "95%",
+        // margin: "20px 10px",
+        padding: "10px 8px",
+    },
+
+    form:{
+        border: "3px solid #f1f1f1",
+        width: "350px"
+    },
+    input:{
+        width: "100%",
+        padding: "12px 20px",
+        margin: "8px 0px",
+        display: "inline-block",
+        border: "1px solid #ccc",
+        boxSizing: "border-box"
+    },
+    btnStyle:{
+        backgroundColor: "#4caf50",
+        color: "white",
+        padding: "14px 20px",
+        margin: "8px 0px",
+        border: "none",
+        cursor: "pointer",
+        width: "100%"
+    }
+}))
+
 function Login() {
+    const classes = styles();
     return(
-        <div>
-            <form action="">
-                <div className="form-group">
-                    <label htmlFor="username">
-                        <h4>Username</h4>
-                    </label>
-                    <input type="text" id="username" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password">
-                        <h4>Password</h4>
-                    </label>
-                    <input type="password" id="password" />
-                </div>
-                <button>Login</button>
-            </form>
+        <div className={classes.body}>
+            <div className={classes.content}>
+                <h2>Login Form</h2>
+                <form className={classes.form}>
+                    <div className={classes.formContent}>
+                        <label htmlFor="username">
+                            <h4>Username</h4>
+                        </label>
+                        <input 
+                            className={classes.input} 
+                            type="text" 
+                            id="username" 
+                            placeholder="Enter Username"
+                            required/>
+                        <label htmlFor="password">
+                            <h4>Password</h4>
+                        </label>
+                        <input 
+                            className={classes.input} 
+                            type="password" 
+                            id="password" 
+                            placeholder="Enter Password"
+                            required/>
+                    <button className={classes.btnStyle}>Login</button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
