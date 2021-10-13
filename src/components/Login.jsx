@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
+import '../index.css';
 
 const styles = makeStyles(theme => ({
     body:{
@@ -50,7 +51,7 @@ function Login() {
                 <form className={classes.form}>
                     <div className={classes.formContent}>
                         <label htmlFor="username">
-                            <h4>Username</h4>
+                            <h4 className="font-size-15">Username</h4>
                         </label>
                         <input 
                             className={classes.input} 
@@ -59,7 +60,7 @@ function Login() {
                             placeholder="Enter Username"
                             required/>
                         <label htmlFor="password">
-                            <h4>Password</h4>
+                            <h4 className="font-size-15">Password</h4>
                         </label>
                         <input 
                             className={classes.input} 
