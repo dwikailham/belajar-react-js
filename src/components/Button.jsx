@@ -22,7 +22,7 @@ function Button(){
     const classes = styles()
     return(
         <div>
-            <button className={classes.btnStyle}>
+            <button className={classes.btnStyle} disabled="true">
                 Login
             </button>
         </div>

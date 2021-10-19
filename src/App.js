@@ -1,13 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import Example from './components/Example';
-import ButtonCategoryPayment from './components/ButtonCategoryPayment';
+import Beranda from './components/beranda/Beranda';
 import Login from './components/Login';
+import LoginPage from './components/LoginPage';
 
 function App() {
   return (
-    <div className="">
-      <Login/>
+    <div>
+      {/* <Beranda /> */}
+      {/* <Login /> */}
+      <LoginPage/>
     </div>
   );
 }
