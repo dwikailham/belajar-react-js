@@ -7,8 +7,6 @@ function Data() {
       <h1>Halaman Data</h1>
       <h1>Halaman Data</h1>
       <h1>Halaman Data</h1>
-      <h1>Halaman Data</h1>
-      <h1>Halaman Data</h1>
       
       
     </div>

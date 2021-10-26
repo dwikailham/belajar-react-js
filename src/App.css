@@ -56,10 +56,16 @@
   flex: 1;
 }
 
-.home,
+.home{
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
 .laporan,
 .data,
-.chart {
+.chart{
   
   display: flex;
   height: 100vh;
@@ -67,5 +73,4 @@
   justify-content: center;
   font-size: 3rem;
   flex-direction: column;
-  
 }

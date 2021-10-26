@@ -3,24 +3,24 @@ import { makeStyles } from "@material-ui/core";
 // import "../index.css";
 import "./LoginPage.css";
 import logoIST from "../assets/images/logoIST.png";
+import { Link } from "react-router-dom";
 
 export default class LoginPage extends Component {
-    state = {
-        disabled : true
-    }
+  state = {
+    disabled: true,
+  };
 
-    handleChange = (e) => {
-        if(e.target.value.length >= 2){
-            this.setState({
-                disabled: false
-            });
-        }
-        else{
-            this.setState({
-                disabled: true
-            });
-        }
+  handleChange = (e) => {
+    if (e.target.value.length >= 2) {
+      this.setState({
+        disabled: false,
+      });
+    } else {
+      this.setState({
+        disabled: true,
+      });
     }
+  };
 
   render() {
     return (
@@ -53,7 +53,10 @@ export default class LoginPage extends Component {
                 onChange={this.handleChange}
                 required
               />
-              <button className="btn-style" disabled={this.state.disabled}>Login</button>
+
+              <button className="btn-style" disabled={this.state.disabled}>
+                Login
+              </button>
             </div>
           </form>
         </div>

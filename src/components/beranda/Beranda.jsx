@@ -8,6 +8,7 @@ import Data from "../pages/Data";
 import Laporan from "../pages/Laporan";
 import "../../App.css";
 import FooterComp from "./FooterComp";
+import Cards from "../pages/Cards";
 
 export default class Beranda extends Component {
   static propTypes = {
@@ -21,7 +22,7 @@ export default class Beranda extends Component {
           <Router>
             <NavComp />
             <Switch>
-              <Route path="/" exact component={Home} />
+              <Route path="/" exact component={Cards} />
               <Route path="/data" component={Data} />
               <Route path="/laporan" component={Laporan} />
               <Route path="/chart" component={Chart} />
